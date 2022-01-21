@@ -1,0 +1,159 @@
+.register-section {
+  height: 100%;
+
+  .login-header {
+    width: 100%;
+    height: 1.53rem;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      .header-section,
+      .header-left a,
+      .header-right .nagivation-tab .tab-item {
+        color: #333333;
+      }
+    }
+
+    .logo {
+      width: 15.2rem;
+      height: 100%;
+      margin: 0 auto;
+      color: #333333;
+      font-size: 38px;
+      font-family: "HelveticaNeue-CondensedBold";
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 0.57rem;
+        height: 0.71rem;
+        object-fit: cover;
+        margin-right: 0.04rem;
+      }
+    }
+  }
+
+  .register-wrap {
+    display: flex;
+    justify-content: center;
+    margin: -0.2rem 0 0.6rem;
+
+    .register-form {
+      width: 7rem;
+      font-family: Helvetica;
+
+      .ant-form-item {
+        color: #333333;
+        font-size: .16rem;
+        margin-bottom: 0.16rem;
+
+        .ant-form-item-label {
+          > label {
+            height: .38rem;
+            font-size: 0.16rem;
+          }
+        }
+
+        .ant-input {
+          height: .38rem;
+          font-size: .14rem;
+          color: #333333;
+          border-radius: 0;
+        }
+      }
+
+      .form-btn {
+        width: 1.5rem;
+        height: 0.46rem;
+        border-radius: .04rem;
+        font-size: 0.16rem;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  input::-webkit-input-placeholder {
+    color: #999999;
+    font-size: .14rem;
+  }
+
+  input:-moz-placeholder {
+    color: #999999;
+    font-size: .14rem;
+  }
+
+  input::-moz-placeholder{
+    color: #999999;
+    font-size: .14rem;
+  }
+
+  input:-ms-input-placeholder {
+    color: #999999;
+    font-size: .14rem;
+  }
+
+  button[ant-click-animating-without-extra-node]:after {
+    // border: 0 none;
+    // opacity: 0;
+    // animation:none 0 ease 0 1 normal;
+  }
+}
+
+@media screen and (max-width: 1440px){
+   .register-section {
+    .login-header {
+      .logo {
+        font-size: 29px;
+      }
+    }
+
+    .register-wrap {
+      .register-form {
+        .ant-form-item {
+          font-size: 12px;
+
+          .ant-form-item-label > label {
+            height: 29px;
+          }
+
+          .ant-form-item-control {
+            .ant-form-item-control-input {
+              min-height: 29px;
+            }
+          }
+
+          .ant-input {
+            height: 29px;
+            font-size: 12px;
+          }
+        }
+
+        .form-btn {
+          height: 35px;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    input::-webkit-input-placeholder {
+      color: #999999;
+      font-size: 12px;
+    }
+
+    input:-moz-placeholder {
+      color: #999999;
+      font-size: 12px;
+    }
+
+    input::-moz-placeholder{
+      color: #999999;
+      font-size: 12px;
+    }
+
+    input:-ms-input-placeholder {
+      color: #999999;
+      font-size: 12px;
+    }
+  }
+}

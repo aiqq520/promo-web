@@ -1,0 +1,114 @@
+.tutorial-section {
+  .header {
+    .header-section,
+    .header-left a,
+    .header-right .nagivation-tab .tab-item {
+      color: #333333;
+    }
+  }
+
+  .section-wrap-tutorial {
+    width: 13rem;
+    margin: 0 auto;
+    padding-top: 0.63rem;
+
+    .tutorial-item {
+      margin-bottom: 1.2rem;
+
+      .head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.34rem;
+
+        .icon {
+          width: 0.72rem;
+          height: 0.72rem;
+          background: #E73B4B;
+          border-radius: 50%;
+        }
+
+        .title {
+          color: #333333;
+          font-size: 0.36rem;
+          font-family: Helvetica-Bold;
+          margin: 0 0.32rem 0 0.2rem;
+          white-space: nowrap;
+        }
+
+        .line {
+          flex: 1;
+          width: 100%;
+          height: 1px;
+          background-image: linear-gradient(to right, #FF939D 0%, #FF939D 50%, transparent 50%);
+          background-size: 8px 1px;
+          background-repeat: repeat-x;
+        }
+      }
+
+      .content {
+        margin-left: 0.93rem;
+
+        .list {
+          width: 100%;
+          display: flex;
+          color: #333333;
+          font-size: .18rem;
+
+          .dot {
+            width: 0.2rem;
+            height: 0.2rem;
+            line-height: 0.2rem;
+            background: #333333;
+            border-radius: 50%;
+            color: #FFFFFF;
+            margin-right: 0.09rem;
+            text-align: center;
+            transform: translateY(0.13rem);
+            font-size: .14rem;
+          }
+
+          .detail {
+            flex: 1;
+            line-height: 0.46rem;
+
+            span {
+              font-family: Helvetica-Bold;
+            }
+          }
+        }
+
+        .answer {
+          .dot {
+            width: 0.28rem;
+            height: 0.28rem;
+            line-height: 0.28rem;
+            transform: translateY(0.09rem);
+            span {
+              font-size: .18rem;
+            }
+          }
+
+          .red {
+            background: #E73B4B;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px){
+   .tutorial-section {
+    .section-wrap-tutorial .tutorial-item {
+      .content {
+        .list {
+          font-size: 14px;
+
+          .dot {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+.index-section {
+  width: 100%;
+}
+.index-section .index-banner {
+  width: 100%;
+  height: 5.84rem;
+  background: #D12538;
+}
+.index-section .index-banner .banner-wrap {
+  width: 15.2rem;
+  max-width: 15.2rem;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.index-section .index-banner .banner-category {
+  width: 3rem;
+  height: 100%;
+  background: #242424;
+  opacity: 0.85;
+  padding: 0.15rem 0;
+}
+.index-section .index-banner .banner-category .category-wrap {
+  width: 100%;
+  height: 100%;
+  font-size: 0.14rem;
+  font-family: Helvetica;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.index-section .index-banner .banner-category .category-wrap .category-item {
+  width: 100%;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  color: #FFFFFF;
+  display: flex;
+  cursor: pointer;
+}
+.index-section .index-banner .banner-category .category-wrap .category-item span {
+  width: 100%;
+  padding: 0 0.34rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.index-section .index-banner .banner-category .category-wrap .category-item:hover {
+  background: #E73B4B;
+}
+.index-section .index-banner .banner-extra {
+  width: 3rem;
+  height: 100%;
+  padding: 0.3rem;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+}
+.index-section .index-banner .banner-extra .extra-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.index-section .index-banner .banner-extra .extra-wrap .title {
+  color: #333333;
+  font-size: 0.16rem;
+  font-family: Helvetica;
+  text-align: center;
+  padding: 0.18rem 0;
+}
+.index-section .index-banner .banner-extra .extra-wrap .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.index-section .index-banner .banner-extra .extra-wrap .btn a {
+  width: 1.1rem;
+  height: 0.46rem;
+  color: #E73B4B;
+  font-size: 0.16rem;
+  border: 1px solid #E73B4B;
+  border-radius: 0.04rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.index-section .index-banner .banner-extra .extra-wrap .btn a:hover {
+  color: #ffffff;
+  background: #E73B4B;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .info {
+  color: #333333;
+  font-size: 0.16rem;
+  font-family: 'HelveticaNeue-CondensedBold';
+  margin-bottom: 0.2rem;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list {
+  flex: 1;
+  overflow: hidden;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item {
+  display: flex;
+  align-items: center;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item img {
+  width: 0.72rem;
+  height: 0.72rem;
+  object-fit: cover;
+  margin-right: 0.09rem;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item .detail {
+  flex: 1;
+  font-size: 0.16rem;
+  font-family: 'Helvetica';
+  overflow: hidden;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item .detail .name {
+  color: #333333;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item .detail .intro {
+  color: #999999;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item .detail .name,
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item .detail .intro {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item:not(:last-child) {
+  margin-bottom: 0.1rem;
+}
+.index-section .index-banner .banner-extra .extra-wrap .guess .list .item:hover .name {
+  color: #E73B4B;
+}
+.index-section .index-banner .banner-swiper {
+  width: 9.2rem;
+  height: 100%;
+}
+.index-section .index-banner .banner-swiper img {
+  width: 100%;
+  height: 5.84rem;
+  object-fit: cover;
+}
+.index-section .index-banner .banner-swiper .swiper-pagination-bullet {
+  width: 0.1rem;
+  height: 0.1rem;
+  background: #FFFFFF;
+  margin: 0 5px;
+}
+.index-section .index-product {
+  background: #fafafa;
+  padding-bottom: 0.6rem;
+}
+.index-section .index-product .product-section {
+  width: 15.2rem;
+  max-width: 15.2rem;
+  margin: 0 auto;
+}
+.index-section .index-product .product-section .product-wrap {
+  width: 100%;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  margin-top: 0.2rem;
+}
+.index-section .index-product .product-section .product-wrap .title {
+  font-family: 'HelveticaNeue-CondensedBold';
+  color: #333333;
+  font-size: 0.24rem;
+  padding: 0.15rem 0 0 0.32rem;
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.1rem 0.4rem;
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item {
+  width: 2.4rem;
+  height: 2.5rem;
+  font-size: 0.16rem;
+  padding: 0.35rem 0.45rem 0.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item img {
+  width: 1.38rem;
+  height: 1.44rem;
+  object-fit: cover;
+  transition: transform ease 0.3s;
+  margin: 0.08rem 0.1rem;
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item img:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item .detail {
+  width: 100%;
+  margin-top: 0.06rem;
+  text-align: left;
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item .name {
+  color: #333333;
+  font-family: 'Helvetica';
+  word-wrap: break-word;
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item .price {
+  color: #E73B4B;
+  font-family: 'Helvetica-Bold';
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item .name,
+.index-section .index-product .product-section .product-wrap .product-wrapper .item .price {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item:hover {
+  transition: all 0.5s;
+  box-shadow: 0 19px 39px 0 rgba(0, 0, 0, 0.12);
+}
+.index-section .index-product .product-section .product-wrap .product-wrapper .item:hover .name {
+  color: #E73B4B;
+}
+@media screen and (max-width: 1440px) {
+  .index-section .index-banner .banner-category .category-wrap {
+    font-size: 12px;
+  }
+  .index-section .index-banner .banner-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+}

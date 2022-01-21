@@ -1,0 +1,213 @@
+.section-wrap-process {
+  width: 11.2rem;
+  padding: 0.8rem 0 1rem;
+  margin: 0 auto;
+
+  .process-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .info-wrap {
+      width: 100%;
+      font-size: 0.2rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+      display: flex;
+
+      .head-r {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        margin-left: -0.1rem;
+
+        .head {
+          width: 0.2rem;
+          height: 0.2rem;
+          border-radius: 50%;
+          background: #ffffff;
+          border: 1px solid #e73b4b;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 0.1rem;
+            height: 0.1rem;
+            background: #e73b4b;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        .split {
+          width: 0.38rem;
+          height: 1px;
+          background: #e73b4b;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 0.05rem;
+            height: 0.05rem;
+            background: #e73b4b;
+            border-radius: 50%;
+            z-index: 99;
+            right: 0;
+            transform: translateY(-1.5px);
+          }
+        }
+      }
+
+      .content {
+        width: 5rem;
+        position: relative;
+        word-break: break-word;
+        margin-left: 0.7rem;
+
+        .time {
+          line-height: 1;
+          color: #e73b4b;
+          font-family: Helvetica-Bold;
+          margin-bottom: 0.1rem;
+        }
+
+        .detail {
+          color: #333333;
+          font-family: Helvetica;
+          line-height: 0.46rem;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0.2rem;
+        left: 50%;
+        height: calc(100% - 0.2rem);
+        transform: translate(-50%, 0);
+        border-left: 1px dotted #e73b4b;
+      }
+    }
+
+    .right-item {
+      justify-content: flex-end;
+    }
+
+    .left-item {
+      .head-r {
+        transform: rotate(180deg);
+        margin-left: -0.48rem;
+      }
+
+      .content {
+        margin: 0;
+        .time {
+          text-align: right;
+        }
+      }
+    }
+
+    // 圆点
+    .dot-wrap {
+      position: relative;
+
+      .dot-circle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 1px solid rgba(154,154,154, 0.2);
+        position: relative;
+
+        .dot-sub {
+          width: 0.8rem;
+          height: 0.8rem;
+          background: #E73B4B;
+          color: #FFFFFF;
+          font-size: 0.18rem;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            border: 1px solid #9A9A9A;
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .dot-circle-common {
+        margin-bottom: 0.52rem;
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 0.52rem;
+          border-left: 1px dotted #E73B4B;
+          bottom: -0.52rem;
+          margin: 0 auto;
+        }
+      }
+
+      .dot-circle-end {
+        .dot-bg {
+          font-size: 0.14rem;
+          text-align: center;
+        }
+        .dot-txt {
+          font-size: 0.2rem;
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .dot-circle,
+      .dot-sub {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .section-wrap-process {
+    .process-info {
+      .info-wrap .head-r {
+        margin-left: -7.6px;
+
+        .head {
+          width: 16px;
+          height: 16px;
+          &::after {
+            width: 8px;
+            height: 8px;
+          }
+        }
+        .split {
+          &::after {
+            width: 4px;
+            height: 4px;
+          }
+        }
+      }
+      .left-item .head-r {
+        margin-left: -0.48rem;
+      }
+    }
+  }
+}

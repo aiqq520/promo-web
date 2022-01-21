@@ -1,0 +1,60 @@
+.section-wrap-contact {
+  width: 100%;
+  height: 100%;
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  justify-content: center;
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Helvetica;
+    white-space: nowrap;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 2.4rem;
+      padding-right: 2.4rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0.2rem;
+        right: 0;
+        height: 2rem;
+        border-left: 1px dotted #DDDDDD;
+      }
+    }
+
+  }
+
+  .contact-phone, .contact-email {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+  }
+
+  .contact-phone {
+    background: linear-gradient(-55deg, #E73B4B 0%, #FF7C62 100%);
+  }
+
+  .contact-email {
+    background: linear-gradient(-55deg, #357CE6 0%, #45ADF6 100%);
+  }
+
+  .contact-text {
+    color: #777777;
+    font-size: 0.24rem;
+    margin: 0.4rem 0 0;
+  }
+
+  .contact-num {
+    position: absolute;
+    color: #333333;
+    font-size: 0.32rem;
+    font-weight: bold;
+    bottom: -0.5rem;
+  }
+}
