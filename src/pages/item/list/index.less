@@ -2,21 +2,20 @@
   width: 100%;
   height: 100%;
   background: #fafafa;
-  padding-bottom: .5rem;
+  padding-bottom: 1rem;
 
   .item-wrap {
     width: 13rem;
     max-width: 13rem;
     margin: .2rem auto;
     display: flex;
-    align-items: flex-start;
 
     .item-list-box {
-      flex: 1;
-      width: 100%;
+      width: 9.8rem;
+      height: 100%;
       display: flex;
       flex-wrap: wrap;
-      margin-left: .22rem;
+      margin-left: .2rem;
 
       .list-item {
         width: 2.3rem;
@@ -27,14 +26,14 @@
         margin-bottom: .2rem;
 
         &:not(:nth-child(4n)) {
-          margin-right: .18rem
+          margin-right: .2rem
         }
 
         .list-item-img {
           width: 2.3rem;
           height: 2.3rem;
           object-fit: cover;
-          transition: transform ease 0.3s;
+          // transition: transform ease 0.3s;
           // &:hover {
           //   cursor: pointer;
           //   transform: scale(1.02);
@@ -42,26 +41,50 @@
         }
 
         .list-item-info {
-          flex: 1;
-          width: 100%;
-          margin: .2rem .2rem .15rem;
+          height: .98rem;
+          padding: .19rem .2rem .15rem;
           text-align: left;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
 
           .info-detail {
             color: #777777;
             font-size: .14rem;
             font-family: Helvetica;
-            line-height: .22rem;
+            overflow: hidden;
+            // text-overflow: ellipsis;
+            // white-space: normal;
+            // display: -webkit-box;
+            // -webkit-box-orient: vertical;
+            // -webkit-line-clamp: 2;
+          }
+
+          .info-price {
+            font-size: .16rem;
+            color: #e73b4b;
+            font-family: 'Helvetica-Bold';
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .item-section {
+    .item-wrap {
+      .item-list-box {
+        .list-item .list-item-info {
+          .info-detail {
+            font-size: 12px;
+          }
 
           .info-price {
-            line-height: .24rem;
-            font-size: .16rem;
-            color: #e73b4b;
-            font-family: 'Helvetica-Bold';
+            font-size: 12px;
           }
         }
       }

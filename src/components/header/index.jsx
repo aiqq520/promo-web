@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, Dropdown, Icon } from 'antd'
 import { navigateConfig } from '@/common/index'
-import commonCart from '@/assets/images/cart.png'
-import indexCart from '@/assets/images/index-cart.png'
+import commonCart from '@/assets/images/icons/cart.png'
+import indexCart from '@/assets/images/icons/index-cart.png'
 import './index.less'
 
 function Header(props) {
@@ -53,10 +53,10 @@ function Header(props) {
             })}
           </div>
 
-          <div className='header-cart'>
+          <Link to={'/cart'} className='header-cart'>
             <img src={type === 'index' ? indexCart : commonCart} alt='' />
             <span>Inquiry Basket</span>
-          </div>
+          </Link>
         </div>
       </div>
     </header>

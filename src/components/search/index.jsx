@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Header from '@/components/header'
-import phone from '@/assets/images/phone.png'
+import phone from '@/assets/images/icons/phone.png'
 import { Input } from 'antd'
 import './index.less'
 

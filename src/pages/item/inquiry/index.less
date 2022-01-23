@@ -1,0 +1,135 @@
+.item-inquiry-section {
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+  padding-bottom: .5rem;
+
+  .inquiry-section {
+    width: 13rem;
+    max-width: 13rem;
+    margin: .2rem auto;
+    display: flex;
+
+    .inquiry-wrap {
+      width: 9.8rem;
+      background: #ffffff;
+      margin-left: .2rem;
+      padding: 0 .6rem;
+
+      .inquiry-title {
+        width: 100%;
+        font-size: .16rem;
+        color: #333333;
+        font-family: 'HelveticaNeue-CondensedBold';
+        margin: .25rem 0 .2rem;
+      }
+
+      .inquiry-img img {
+        width: 2.35rem;
+        height: 2.35rem;
+        object-fit: cover;
+        margin-bottom: .2rem;
+      }
+
+      .inquiry-info {
+        width: 100%;
+        font-size: .14rem;
+        color: #777777;
+        line-height: .22rem;
+      }
+
+      .inquiry-form {
+        margin-top: .3rem;
+
+        .ant-form-item {
+          color: #333333;
+          font-size: .16rem;
+          margin-bottom: .16rem;
+
+          .ant-form-item-label {
+            text-align: left;
+            > label {
+              height: .38rem;
+              font-size: .14rem;
+              color: #333333;
+            }
+          }
+
+          .ant-input {
+            height: 0.38rem;
+            font-size: 0.14rem;
+            color: #333333;
+            border-radius: 0;
+            // border-color: #DDDDDD;
+          }
+        }
+
+        .upload-btn {
+          width: 1.3rem;
+          height: .38rem;
+          border: 1px solid #bbbbbb;
+          border-radius: .04rem;
+          font-size: .14rem;
+          color: #333333;
+          font-family: Helvetica;
+          padding: 0;
+        }
+
+        .info-upload {
+          color: #777777;
+          font-size: .14rem;
+          margin: .17rem 0 .25rem;
+        }
+
+        .submit-btn {
+          width: 1.5rem;
+          height: .46rem;
+          border-radius: .04rem;
+          font-size: .16rem;
+          margin-left: .8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .item-inquiry-section {
+    .inquiry-section {
+      .inquiry-wrap {
+        .inquiry-title {
+          font-size: 12px;
+        }
+        .inquiry-info {
+          font-size: 12px;
+        }
+
+        .inquiry-form {
+          .ant-form-item {
+            .ant-form-item-label  {
+              > label {
+                font-size: 12px;
+              }
+            }
+
+            .ant-input {
+              font-size: 12px;
+            }
+          }
+
+          .upload-btn {
+            font-size: 12px;
+          }
+
+          .info-upload {
+            font-size: 12px;
+          }
+
+          .submit-btn {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

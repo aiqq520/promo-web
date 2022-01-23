@@ -1,6 +1,6 @@
-import bannerAbout from '@/assets/images/banner-about.png'
-import bannerContact from '@/assets/images/banner-contact.png'
-import bannerProcess from '@/assets/images/banner-process.png'
+import bannerAbout from '@/assets/images/banner/banner-about.png'
+import bannerContact from '@/assets/images/banner/banner-contact.png'
+import bannerProcess from '@/assets/images/banner/banner-process.png'
 
 export const bannerConfigs = {
   'CONTACT': {

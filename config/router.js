@@ -51,6 +51,11 @@ const routes = [
         component: './item/detail'
       },
       {
+        // 询价单
+        path: '/item/inquiry',
+        component: './item/inquiry'
+      },
+      {
         component: '404'
       }
     ]

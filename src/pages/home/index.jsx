@@ -1,27 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { connect } from 'dva'
 import SearchComp from '@/components/search'
 import IndexBanner from './components/banner'
 import IndexProduct from './components/product'
-import { queryCategoryList, queryHomeList } from '@/service/home';
 import './index.less'
 
 function Index(props){
-  const [dataInfo, setDataInfo] = useState({}) // 首页信息
-  const [categoryList, setCategoryList] = useState([]) // 类目列表
 
-  useEffect(() => {
-    // getDataList()
-  }, [])
-
-  const getDataList = async() => {
-    // 获取类目
-    const res = await queryCategoryList()
-    setCategoryList(res && res.data || [])
-
-    // 获取首页信息
-    const res1 = await queryHomeList()
-    setDataInfo(res1 && res1.data || {})
-  }
+  const { global: { homeInfo, categoryList }, loading } = props
 
   return (
     <section className='container'>
@@ -31,15 +17,22 @@ function Index(props){
 
         {/** banner */}
         <IndexBanner
-          dataInfo={dataInfo}
+          loading={loading}
+          dataInfo={homeInfo}
           categoryList={categoryList}
         />
 
         {/** 商品 */}
-        <IndexProduct />
+        <IndexProduct
+          loading={loading}
+          dataInfo={homeInfo}
+        />
       </div>
     </section>
   )
 }
 
-export default Index
+export default connect(({ global, loading }) => ({
+  global,
+  loading: loading.effects['global/init']
+}))(Index)
