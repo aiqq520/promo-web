@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'umi/link';
 import { navigateConfig } from '@/common/index'
 import './index.less'
 

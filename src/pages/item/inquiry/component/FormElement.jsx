@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Form, Input, Upload, Row, Col, Button } from 'antd'
-import test from '@/assets/images/test.png'
+import sample from '@/assets/images/sample.png'
 
 const formItemLayout = {
   labelCol: { span: 6 },
   wrapperCol: { span: 16 },
 };
 
-const itemLayout = {
-  wrapperCol: { span: 14, offset: 4 }
-}
+// const itemLayout = {
+//   wrapperCol: { span: 14, offset: 4 }
+// }
 
 function FormElement(props) {
-  const [fileList, setFileList] = useState([])
+  // const [fileList, setFileList] = useState([])
   const { form: { getFieldDecorator } } = props
 
   const onSubmit = e => {
@@ -28,7 +28,7 @@ function FormElement(props) {
     <div className="inquiry-wrap">
       <div className="inquiry-title">Sample Request</div>
       <div className="inquiry-img">
-        <img src={test} alt='' />
+        <img src={sample} alt='' />
       </div>
       <div className="inquiry-info">
         We provide random samples for free with total of under $5. Just please absorb shipping charge(roughly $25), as they are sent out directly from our oversea office. If you need to imprint your logo / information on your item, please upload your artwork and may require a set up charge.
@@ -144,7 +144,7 @@ function FormElement(props) {
             {getFieldDecorator('remarks', {
               rules: [{ required: true, message: 'please enter your remarks' }]
             })(
-              <Input.TextArea rows={8} />
+              <Input.TextArea rows={16} autoSize />
             )}
           </Form.Item>
 
@@ -152,6 +152,7 @@ function FormElement(props) {
             Please indicate any special instructions (i.e. material needed, customization, etc.)<br />
             Note: We will review this sample request and get back to you in 24 hours. Thank you for your patience.
           </div>
+
           <Form.Item label='Code'>
             <Row gutter={8}>
               <Col span={12}>

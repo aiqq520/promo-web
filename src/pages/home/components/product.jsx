@@ -1,7 +1,6 @@
 import React from 'react'
 import { Spin } from 'antd'
 import { Link } from 'react-router-dom'
-import testImage from '@/assets/images/test.png'
 
 function IndexProduct(props) {
   const { dataInfo, loading } = props
@@ -24,9 +23,9 @@ function IndexProduct(props) {
                       pathname: '/item/detail',
                       query: { itemId: item.id }
                     }}>
-                    <img src={item.mainImage || testImage} alt='' />
+                    <img src={item.mainImage} alt='' />
                     <div className='detail'>
-                      <div className='name'>{item.name}</div>
+                      <div className='name'>{item.title}</div>
                       <div className='price'>${item.lowPrice} - {item.highPrice}</div>
                     </div>
                   </Link>
@@ -49,7 +48,7 @@ function IndexProduct(props) {
                     }}>
                     <img src={item.mainImage} alt='' />
                     <div className='detail'>
-                      <div className='name'>{item.name}</div>
+                      <div className='name'>{item.title}</div>
                       <div className='price'>${item.lowPrice} - {item.highPrice}</div>
                     </div>
                   </Link>

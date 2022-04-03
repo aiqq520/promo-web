@@ -28,7 +28,8 @@
     }
 
     .about-title {
-      font-family: Helvetica-Bold;
+      font-family: 'Helvetica-Bold';
+      font-weight: 600;
     }
   }
 }
@@ -37,6 +38,12 @@
   .section-wrap-about {
     .about-item {
       font-size: 16px;
+
+      &::before {
+        width: 9px;
+        height: 9px;
+      }
+
     }
   }
 }

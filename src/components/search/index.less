@@ -29,15 +29,23 @@
         justify-content: space-between;
 
         .logo {
+          display: flex;
+          align-items: center;
           color: #333333;
           font-size: 0.38rem;
-          font-family: 'HelveticaNeue-CondensedBold';
+          font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue';
+          font-weight: 600;
+          font-stretch: condensed;
 
           img {
-            width: 0.57rem;
-            height: 0.71rem;
+            // width: 0.57rem;
+            // height: 0.71rem;
             object-fit: cover;
             margin-right: 0.04rem;
+          }
+
+          span {
+            font-size: 0.38rem;
           }
         }
 
@@ -65,23 +73,29 @@
           }
         }
 
-        .phone {
-          color: #e73b4b;
-          font-size: 0.34rem;
-          font-family: 'HelveticaNeue-CondensedBlack';
-
-          img {
-            width: 0.48rem;
-            height: 0.48rem;
-            object-fit: cover;
-            margin-right: 0.08rem;
-          }
-        }
-
-        .logo,
-        .phone {
+        .search-info {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          .info-item {
+            color: #e73b4b;
+            font-size: .22rem;
+            font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue';
+            font-weight: 600;
+            font-stretch: condensed;
+            display: flex;
+            align-items: center;
+
+            img {
+              object-fit: cover;
+              margin-right: .1rem;
+            }
+
+            span {
+              font-size: .22rem;
+            }
+          }
         }
       }
     }

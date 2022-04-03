@@ -56,9 +56,17 @@ const routes = [
         component: './item/inquiry'
       },
       {
+        // 购物车
+        path: '/cart',
+        component: './cart/index'
+      },
+      {
         component: '404'
       }
     ]
+  },
+  {
+    component: '404'
   }
 ]
 

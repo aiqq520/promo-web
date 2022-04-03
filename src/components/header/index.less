@@ -3,7 +3,7 @@
   z-index: 999;
 
   .header-section {
-    width: 15.2rem;
+    // width: 15.2rem;
     max-width: 15.2rem;
     margin: 0 2rem;
     display: flex;
@@ -40,6 +40,7 @@
         align-items: center;
 
         .tab-item {
+          font-size: 0.16rem;
           display: flex;
           align-items: center;
           color: #FFFFFF;
@@ -73,8 +74,12 @@
           margin-right: 0.1rem;
         }
 
+        span {
+          font-size: .16rem;
+        }
+
         &:hover {
-          color: #E73B4B;
+          color: #E73B4B !important;
         }
       }
     }
@@ -89,7 +94,9 @@
         font-size: 12px;
       }
 
-      .header-right {
+      .header-right,
+      .nagivation-tab .tab-item,
+      .header-cart span {
         font-size: 14px;
       }
     }
@@ -99,7 +106,9 @@
 @media screen and (max-width: 1440px){
    .header {
     .header-section {
-      .header-right {
+      .header-right,
+      .nagivation-tab .tab-item,
+      .header-cart span {
         font-size: 12px;
 
         .nagivation-tab .tab-item .anticon.anticon-down {

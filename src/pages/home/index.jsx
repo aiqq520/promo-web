@@ -3,17 +3,29 @@ import { connect } from 'dva'
 import SearchComp from '@/components/search'
 import IndexBanner from './components/banner'
 import IndexProduct from './components/product'
+import router from 'umi/router';
 import './index.less'
 
 function Index(props){
 
   const { global: { homeInfo, categoryList }, loading } = props
 
+  // 搜索框查询
+  const handleSearch = (values) => {
+    router.push({
+      pathname: '/item/list',
+      query: {
+        item_keyword: values,
+        key: 'search'
+      }
+    })
+  }
+
   return (
     <section className='container'>
       <div className='index-section'>
         {/** header */}
-        <SearchComp />
+        <SearchComp onSearch={handleSearch} />
 
         {/** banner */}
         <IndexBanner

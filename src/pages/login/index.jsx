@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Form, Input, Button } from 'antd'
 import { Link } from 'react-router-dom'
 import Header from '@/components/header'
+import logo from '@/assets/images/icons/logo.png'
 import './index.less'
 
 class Login extends Component {
@@ -24,7 +25,7 @@ class Login extends Component {
           <div className='login-header'>
             <Header type='index' />
             <div className='logo'>
-              <img src={''} alt='' />
+              <img src={logo} alt='' />
               <span>CINDA PROMO</span>
             </div>
           </div>

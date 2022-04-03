@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '@/components/header'
 import { Form, Input, Button, Row, Col } from 'antd'
+import logo from '@/assets/images/icons/logo.png'
 import './index.less'
 
 const formItemLayout = {
@@ -33,7 +34,7 @@ function Register(props) {
         <div className='login-header'>
           <Header type='index' />
           <div className='logo'>
-            <img src={''} alt='' />
+            <img src={logo} alt='' />
             <span>CINDA PROMO</span>
           </div>
         </div>

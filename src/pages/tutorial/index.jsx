@@ -11,7 +11,7 @@ function Tutorial(props) {
 
         <div className='section-wrap-tutorial'>
           <div className='tutorial-item'>
-            <Title title={'HOWER TO ORDER'} />
+            <Title type={1} title={'HOWER TO ORDER'} />
             <div className='content'>
               <div className='list'>
                 <div className='dot'>1</div>
@@ -32,7 +32,7 @@ function Tutorial(props) {
           </div>
 
           <div className='tutorial-item'>
-            <Title title={'WARRANTY'} />
+            <Title type={2} title={'WARRANTY'} />
             <div className='content'>
               <div className='list'>
                 <div className='dot'>1</div>
@@ -62,7 +62,7 @@ function Tutorial(props) {
           </div>
 
           <div className='tutorial-item'>
-            <Title title={'PATMENT'} />
+            <Title type={3} title={'PATMENT'} />
             <div className='content'>
               <div className='list'>
                 <div className='dot'>1</div>
@@ -83,7 +83,7 @@ function Tutorial(props) {
           </div>
 
           <div className='tutorial-item'>
-            <Title title={'FAQS'} />
+            <Title type={4} title={'FAQS'} />
             <div className='content'>
               <div className='list answer'>
                 <div className='dot'>Q1</div>

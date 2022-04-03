@@ -8,8 +8,10 @@ function Banner(props) {
   const { url, title, extra, info } = (bannerConfigs[type] || {})
 
   return (
-    <div className="banner">
+    <div className='banner'>
       <img className='banner-img' src={url} alt='' />
+
+      {/* banner中头部header */}
       <Header />
 
       <div className='banner-info'>

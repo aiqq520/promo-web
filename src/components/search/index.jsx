@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Header from '@/components/header'
 import phone from '@/assets/images/icons/phone.png'
+import email from '@/assets/images/icons/email.png'
+import logo from '@/assets/images/icons/logo.png'
 import { Input } from 'antd'
 import './index.less'
 
@@ -33,7 +35,8 @@ class SearchComp extends Component {
   }
 
   onSearch = value => {
-    console.log(value)
+    const { onSearch } = this.props
+    onSearch && onSearch(value)
   }
 
   render() {
@@ -46,7 +49,7 @@ class SearchComp extends Component {
         <div className={`search-header ${showSearch ? 'search-show' : ''}`} id='search'>
           <div className='search-wrap'>
             <div className='logo'>
-              <img src={''} alt='' />
+              <img src={logo} alt='' />
               <span>CINDA PROMO</span>
             </div>
 
@@ -60,9 +63,15 @@ class SearchComp extends Component {
               />
             </div>
 
-            <div className='phone'>
-              <img src={phone} alt='' />
-              <span>909-413-7983</span>
+            <div className='search-info'>
+              <div className='info-item'>
+                <img src={phone} alt='' />
+                <span>909-413-7983</span>
+              </div>
+              <div className='info-item'>
+                <img src={email} alt="" />
+                <span>23333@gmail.com</span>
+              </div>
             </div>
           </div>
         </div>
