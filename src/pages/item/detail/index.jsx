@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Tabs, Button, Spin, message } from 'antd';
+import { Tabs, Button, Spin, Modal, message } from 'antd';
 import { connect } from 'dva'
 import { router } from 'umi'
 import { Link } from 'react-router-dom'
@@ -68,6 +68,18 @@ function ItemDetail(props) {
     }
   }
 
+  const handleShow = () => {
+    Modal.info({
+      title: 'Show MailBox Information',
+      content: (
+        <div className="email-txt">info@cindapromo.com</div>
+      ),
+      okText: 'close',
+      icon: null,
+      autoFocusButton: null,
+    })
+  }
+
   const handleBuild = () => {
     router.push('/item/inquiry')
   }
@@ -76,7 +88,7 @@ function ItemDetail(props) {
     router.push('/cart')
   }
 
-  const { itemPriceVOList, shippingDimensionsHeight, shippingDimensionsWidth, shippingDimensionsLength } = (dataInfo || {})
+  const { itemPriceVOList, packageCount, shippingWeight, shippingDimensionsHeight, shippingDimensionsWidth, shippingDimensionsLength } = (dataInfo || {})
   const { youMayLikeList } = (homeInfo || {})
 
   return (
@@ -112,7 +124,7 @@ function ItemDetail(props) {
 
                     <div className="item-info-wrap">
                       <div className="info-title">
-                        <div>{dataInfo && dataInfo.description}</div>
+                        <div>{dataInfo && dataInfo.title}</div>
                         <span>Item No.:  {dataInfo && dataInfo.itemSn}</span>
                       </div>
 
@@ -123,11 +135,11 @@ function ItemDetail(props) {
                         </div>
                         <div className="goods-info">
                           <label>Set up charge</label>
-                          <span>{dataInfo && dataInfo.setupCharge}</span>
+                          <span>{dataInfo && dataInfo.setupCharge && `$${dataInfo.setupCharge}`}</span>
                         </div>
                         <div className="goods-info">
                           <label>Spec. </label>
-                          <span>{shippingDimensionsWidth}"x{shippingDimensionsLength}"x{shippingDimensionsHeight}"</span>
+                          <span>{dataInfo && dataInfo.productSize}</span>
                         </div>
                         <div className="goods-info">
                           <label>Colors</label>
@@ -135,11 +147,13 @@ function ItemDetail(props) {
                         </div>
                         <div className="goods-info">
                           <label>Logo</label>
-                          <span>{dataInfo && dataInfo.productSize}</span>
+                          <span>{dataInfo && dataInfo.imprintSize}</span>
                         </div>
                         <div className="goods-info">
                           <label>Packing</label>
-                          <span>{dataInfo && dataInfo.insidePacking}</span>
+                          <span>
+                            {packageCount && `${packageCount}pcs/Carton;`} {shippingWeight && `G.W: ${shippingWeight}kg;`} Carton: {shippingDimensionsLength}*{shippingDimensionsWidth}*{shippingDimensionsHeight}cm
+                          </span>
                         </div>
                         <div className="goods-info">
                           <label>Feature</label>
@@ -186,7 +200,7 @@ function ItemDetail(props) {
                     </div>
                     <div className="info-btns">
                       <Button className="default-btn" onClick={() => handleBuild()}>Sample Request</Button>
-                      <Button type='primary' onClick={() => handleBuild()}>Build a Quote</Button>
+                      <Button type='primary' onClick={() => handleShow()}>Build a Quote</Button>
                       <Button type='primary' onClick={() => handleAdd()}>Add To Inquiry</Button>
                     </div>
                   </div>
@@ -221,12 +235,14 @@ function ItemDetail(props) {
               <div>Made from non-woven polypropylene, thickness and durable. The size is 21.3"x29". Full length, will protect your clothes properly when cooking, gardening, housecleaning or painting. Large area can be imprinted. Custom size is available.</div>
               <div className='note-info'>
                 <div className='title'>Shipping Details</div>
-                <div>Made from non-woven polypropylene, thickness and durable. The size is 21.3"x29". Full length, will protect your clothes properly when cooking, gardening, housecleaning or painting. Large area can be imprinted. Custom size is available.</div>
+                <div>Please add 4-7 working days for Air or Express delivery, add 20-35 working days for oversea ocean shipping.</div>
               </div>
-              <div className='note-info'>
-                <div className="title">Important note</div>
-                <div>Made from non-woven polypropylene, thickness and durable. The size is 21.3"x29". Full length, will protect your clothes properly when cooking, gardening, housecleaning or painting. Large area can be imprinted. Custom size is available.</div>
-              </div>
+              {dataInfo && dataInfo.importantNote &&
+                <div className='note-info'>
+                  <div className="title">Important note</div>
+                  <div>{dataInfo.importantNote}</div>
+                </div>
+              }
             </TabPane>
             {/* <TabPane tab='Description & Review' key='2'>
               Description & Review Made from non-woven polypropylene, thickness and durable. The size is 21.3"x29". Full length, will protect your clothes properly when cooking,

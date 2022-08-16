@@ -6,8 +6,8 @@ import LazyLoad from 'react-lazyload'
 import SwiperCore, { Pagination, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import 'swiper/swiper.less'
-import 'swiper/components/pagination/pagination.less'
+require('swiper/swiper.less')
+require('swiper/components/pagination/pagination.less')
 
 SwiperCore.use([Pagination, Autoplay])
 
