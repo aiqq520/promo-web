@@ -23,7 +23,7 @@ function ItemDetail(props) {
 
   useEffect(() => {
     getDataInfo()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location])
 
   // 加载详情数据
@@ -105,7 +105,8 @@ function ItemDetail(props) {
                 <Link to={'/index'}>Home</Link><span>{'>'}</span>
                 <Link to={{
                   pathname: '/item/list',
-                  query: { categoryId: dataInfo && dataInfo.categoryId } }}
+                  query: { categoryId: dataInfo && dataInfo.categoryId }
+                }}
                 >
                   {dataInfo && dataInfo.category}
                 </Link>
@@ -114,6 +115,13 @@ function ItemDetail(props) {
               {/* 商品详情 */}
               <div className="item-detail">
                 <div className="item-detail-left">
+                  <div className="item-detail-title">
+                    <div className="info-title">
+                      <div>{dataInfo && dataInfo.title}</div>
+                      <span>Item No.:  {dataInfo && dataInfo.itemSn}</span>
+                    </div>
+                  </div>
+
                   <div className="item-detail-wrap">
                     <div className="item-img-wrap">
                       <img className="main-img" src={currentImage} alt="" />
@@ -123,11 +131,6 @@ function ItemDetail(props) {
                     </div>
 
                     <div className="item-info-wrap">
-                      <div className="info-title">
-                        <div>{dataInfo && dataInfo.title}</div>
-                        <span>Item No.:  {dataInfo && dataInfo.itemSn}</span>
-                      </div>
-
                       <div className="info-details">
                         <div className="goods-info">
                           <label>Material</label>
@@ -161,7 +164,7 @@ function ItemDetail(props) {
                         </div>
                         <div className="goods-info">
                           <label>Price Code</label>
-                          <span>3R2V </span>
+                          <span>5R OR 5C </span>
                         </div>
                         <div className="goods-info-extra">
                           <span>Minimum Order is the smallest quantity listed.</span>
@@ -184,15 +187,15 @@ function ItemDetail(props) {
                     <div className="share-btns">
                       <span>Share to</span>
                       <div className='share-btns-wrap'>
-                        <a href='#'>
+                        <a>
                           <img src={facebook} alt="" />
                           <img src={facebookH} alt="" />
                         </a>
-                        <a href='#'>
+                        <a>
                           <img src={twiter} alt="" />
                           <img src={twiterH} alt="" />
                         </a>
-                        <a href='#'>
+                        <a>
                           <img src={linkin} alt="" />
                           <img src={linkinH} alt="" />
                         </a>

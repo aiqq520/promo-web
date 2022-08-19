@@ -15,12 +15,12 @@ function Contact(props) {
           <div className='contact-item'>
             <img src={phone} alt="手机" />
             <div className='contact-text'>CALL US</div>
-            <div className='contact-num'>909-413-7983</div>
+            <div className='contact-num'>909-323-0011</div>
           </div>
           <div className='contact-item'>
             <img src={email} alt="邮箱" />
             <div className='contact-text'>SEND US</div>
-            <div className='contact-num'>66666666@gmail.com</div>
+            <div className='contact-num'>info@cindapromo.com</div>
           </div>
         </div>
       </div>

@@ -45,6 +45,30 @@
           display: flex;
           flex-direction: column;
 
+          .item-detail-title {
+            width: 100%;
+            .info-title {
+              max-width: 11rem;
+              color: #333333;
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 0.1rem;
+              div {
+                font-size: .3rem;
+                font-family: 'Helvetica-Bold';
+                font-weight: bold;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+
+              span {
+                font-size: .2rem;
+                // font-weight: bold;
+              }
+            }
+          }
+
           .item-detail-wrap {
             width: 100%;
             display: flex;
@@ -78,29 +102,9 @@
               width: 6.1rem;
               margin-left: .35rem;
 
-              .info-title {
-                color: #333333;
-                display: flex;
-                flex-direction: column;
-                div {
-                  font-size: .3rem;
-                  font-family: 'Helvetica-Bold';
-                  font-weight: bold;
-                  overflow: hidden;
-                  white-space: nowrap;
-                  text-overflow: ellipsis;
-                }
-
-                span {
-                  font-size: .22rem;
-                  font-weight: bold;
-                }
-              }
-
               .info-details {
                 display: flex;
                 flex-direction: column;
-                margin-top: .2rem;
 
                 .goods-info {
                   font-size: 0.16rem;

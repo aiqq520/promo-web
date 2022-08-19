@@ -66,11 +66,11 @@ class SearchComp extends Component {
             <div className='search-info'>
               <div className='info-item'>
                 <img src={phone} alt='' />
-                <span>909-413-7983</span>
+                <span>909-323-0011</span>
               </div>
               <div className='info-item'>
                 <img src={email} alt="" />
-                <span>23333@gmail.com</span>
+                <span>info@cindapromo.com</span>
               </div>
             </div>
           </div>

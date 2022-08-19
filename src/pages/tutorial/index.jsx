@@ -17,7 +17,7 @@ function Tutorial(props) {
                 <div className='dot'>1</div>
                 <div className='detail'>
                   <div>Order by Phone :</div>
-                  <div>You can call our phone: <span>909-413-7983</span></div>
+                  <div>You can call our phone: <span>909-323-0011</span></div>
                 </div>
               </div>
 
@@ -25,7 +25,7 @@ function Tutorial(props) {
                 <div className='dot'>2</div>
                 <div className='detail'>
                   <div>Order by Email:</div>
-                  <div>We'd like to hear from you. You can send orders & questions to info@<span>66666666@gmail.com</span>we will response to you within 24 hours.</div>
+                  <div>We'd like to hear from you. You can send orders & questions to info@<span>info@cindapromo.com</span>we will response to you within 24 hours.</div>
                 </div>
               </div>
             </div>
